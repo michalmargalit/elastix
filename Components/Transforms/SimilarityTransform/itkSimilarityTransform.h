@@ -124,7 +124,8 @@ public:
  */
 
 template <class TScalarType, unsigned int Dimension>
-class ITK_TEMPLATE_EXPORT SimilarityTransform : public SimilarityGroupTemplate<TScalarType, Dimension>::SimilarityTransform_tmp
+class ITK_TEMPLATE_EXPORT SimilarityTransform
+  : public SimilarityGroupTemplate<TScalarType, Dimension>::SimilarityTransform_tmp
 {
 public:
   /** Standard ITK-stuff. */

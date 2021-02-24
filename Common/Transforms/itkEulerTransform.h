@@ -32,11 +32,11 @@ namespace itk
  */
 
 template <unsigned int Dimension>
-class EulerGroup
+class ITK_TEMPLATE_EXPORT EulerGroup
 {
 public:
   template <class TScalarType>
-  class Dummy
+  class ITK_TEMPLATE_EXPORT Dummy
   {
   public:
     /** Typedef's.*/
@@ -51,11 +51,11 @@ public:
  */
 
 template <>
-class EulerGroup<2>
+class ITK_TEMPLATE_EXPORT EulerGroup<2>
 {
 public:
   template <class TScalarType>
-  class Dummy
+  class ITK_TEMPLATE_EXPORT Dummy
   {
   public:
     /** Typedef's.*/
@@ -70,11 +70,11 @@ public:
  */
 
 template <>
-class EulerGroup<3>
+class ITK_TEMPLATE_EXPORT EulerGroup<3>
 {
 public:
   template <class TScalarType>
-  class Dummy
+  class ITK_TEMPLATE_EXPORT Dummy
   {
   public:
     /** Typedef's.*/
@@ -89,7 +89,7 @@ public:
  */
 
 template <class TScalarType, unsigned int Dimension>
-class EulerGroupTemplate
+class ITK_TEMPLATE_EXPORT EulerGroupTemplate
 {
 public:
   typedef EulerGroupTemplate Self;
@@ -100,7 +100,7 @@ public:
   //    typedef EulerGroup<  itkGetStaticConstMacro( SpaceDimension ) >       Euler;
   // The following trick works though:
   template <unsigned int D>
-  class EulerGroupWrap
+  class ITK_TEMPLATE_EXPORT EulerGroupWrap
   {
   public:
     typedef EulerGroup<D> Euler;
@@ -197,7 +197,7 @@ private:
 };
 
 template <class TScalarType>
-class EulerTransform<TScalarType, 3> : public EulerGroupTemplate<TScalarType, 3>::EulerTransform_tmp
+class ITK_TEMPLATE_EXPORT EulerTransform<TScalarType, 3> : public EulerGroupTemplate<TScalarType, 3>::EulerTransform_tmp
 {
 public:
   /** Standard ITK-stuff. */

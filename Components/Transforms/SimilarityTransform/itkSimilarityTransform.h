@@ -33,7 +33,7 @@ namespace itk
  */
 
 template <unsigned int Dimension>
-class SimilarityGroup
+class ITK_TEMPLATE_EXPORT SimilarityGroup
 {
 public:
   template <class TScalarType>
@@ -52,7 +52,7 @@ public:
  */
 
 template <>
-class SimilarityGroup<2>
+class ITK_TEMPLATE_EXPORT SimilarityGroup<2>
 {
 public:
   template <class TScalarType>
@@ -71,7 +71,7 @@ public:
  */
 
 template <>
-class SimilarityGroup<3>
+class ITK_TEMPLATE_EXPORT SimilarityGroup<3>
 {
 public:
   template <class TScalarType>
@@ -90,7 +90,7 @@ public:
  */
 
 template <class TScalarType, unsigned int Dimension>
-class SimilarityGroupTemplate
+class ITK_TEMPLATE_EXPORT SimilarityGroupTemplate
 {
 public:
   typedef SimilarityGroupTemplate Self;
@@ -101,7 +101,7 @@ public:
   //    typedef SimilarityGroup<  itkGetStaticConstMacro( SpaceDimension ) >        Similarity;
   // The following trick works though:
   template <unsigned int D>
-  class SimilarityGroupWrap
+  class ITK_TEMPLATE_EXPORT SimilarityGroupWrap
   {
   public:
     typedef SimilarityGroup<D> Similarity;
@@ -124,7 +124,7 @@ public:
  */
 
 template <class TScalarType, unsigned int Dimension>
-class SimilarityTransform : public SimilarityGroupTemplate<TScalarType, Dimension>::SimilarityTransform_tmp
+class ITK_TEMPLATE_EXPORT SimilarityTransform : public SimilarityGroupTemplate<TScalarType, Dimension>::SimilarityTransform_tmp
 {
 public:
   /** Standard ITK-stuff. */
